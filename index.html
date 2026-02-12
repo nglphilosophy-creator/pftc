@@ -1586,6 +1586,464 @@
 </div>
 </div>
 
+<!--
+  CYCLE INSIGHTS SECTION
+  Drop this into your page between the philosopher cards and the footer.
+  Uses your existing CSS variables and design patterns.
+-->
+
+<style>
+    .insights-section {
+        max-width: 900px;
+        margin: 5rem 0;
+    }
+    .insights-section h2 {
+        font-size: 2.2rem;
+        font-weight: 900;
+        letter-spacing: -1.5px;
+        margin-bottom: 2.5rem;
+    }
+    .insight-block {
+        margin-bottom: 3rem;
+    }
+    .insight-block h3 {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent);
+        margin-bottom: 0.8rem;
+        font-weight: 800;
+    }
+    .insight-block p {
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.7;
+    }
+    .stat-row {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin: 1.5rem 0;
+    }
+    .stat-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.2rem 1.5rem;
+        flex: 1;
+        min-width: 160px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .stat-card .stat-number {
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: -1px;
+        color: var(--accent);
+        display: block;
+    }
+    .stat-card .stat-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #718096;
+        font-weight: 600;
+    }
+    .speed-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.9rem;
+    }
+    .speed-table th {
+        text-align: left;
+        background: var(--accent);
+        color: white;
+        padding: 0.8rem 1rem;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .speed-table td {
+        padding: 0.6rem 1rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .speed-table tr:first-child td {
+        font-weight: 800;
+    }
+    .speed-table .years {
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+    }
+    .insight-divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 3rem 0;
+    }
+    .topic-bar-container {
+        margin: 1rem 0;
+    }
+    .topic-bar-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        font-size: 0.85rem;
+    }
+    .topic-bar-label {
+        width: 180px;
+        flex-shrink: 0;
+        font-weight: 600;
+        color: #4a5568;
+    }
+    .topic-bar-track {
+        flex: 1;
+        height: 18px;
+        background: #edf2f7;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    .topic-bar-fill {
+        height: 100%;
+        background: var(--accent);
+        border-radius: 3px;
+        transition: width 0.3s ease;
+    }
+    .topic-bar-value {
+        width: 40px;
+        text-align: right;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: #718096;
+        margin-left: 0.5rem;
+        font-variant-numeric: tabular-nums;
+    }
+    .three-in-one-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+    .three-in-one-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.2rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .three-in-one-card .trio-name {
+        font-weight: 800;
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 0.3rem;
+    }
+    .three-in-one-card .trio-year {
+        font-size: 0.8rem;
+        color: #718096;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    .three-in-one-card .trio-journals {
+        font-size: 0.8rem;
+        color: #4a5568;
+        font-style: italic;
+    }
+    .coauth-pair {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.9rem;
+    }
+    .coauth-ampersand {
+        font-weight: 900;
+        color: var(--accent);
+        font-size: 1.1rem;
+    }
+    .coauth-venue {
+        color: #718096;
+        font-style: italic;
+        font-size: 0.8rem;
+    }
+    .easter-egg {
+        background: #f7fafc;
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--accent);
+        padding: 1.5rem 2rem;
+        border-radius: 0 8px 8px 0;
+        margin: 1.5rem 0;
+        font-size: 0.95rem;
+        color: #333;
+    }
+</style>
+
+<section class="insights-section">
+    <h2>Fun with the Data</h2>
+
+    <!-- SPEED RECORDS -->
+    <div class="insight-block">
+        <h3>The Speed Records</h3>
+        <div class="stat-row">
+            <div class="stat-card">
+                <span class="stat-number">4 yrs</span>
+                <span class="stat-label">Fastest Cycle (Gallow)</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">49 yrs</span>
+                <span class="stat-label">Slowest Cycle (Audi)</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">13 yrs</span>
+                <span class="stat-label">Median Cycle</span>
+            </div>
+        </div>
+        <table class="speed-table">
+            <thead>
+                <tr><th>Span</th><th>Philosopher</th><th>Years</th></tr>
+            </thead>
+            <tbody>
+                <tr><td class="years">4 yrs</td><td>J. Dmitri Gallow</td><td>2020–2024</td></tr>
+                <tr><td class="years">5 yrs</td><td>Matt Mandelkern</td><td>2019–2024</td></tr>
+                <tr><td class="years">6 yrs</td><td>Justin D'Ambrosio</td><td>2019–2025</td></tr>
+                <tr><td class="years">7 yrs</td><td>David Boylan</td><td>2017–2024</td></tr>
+                <tr><td class="years">7 yrs</td><td>Daniel Greco</td><td>2012–2019</td></tr>
+                <tr><td class="years">8 yrs</td><td>Jake Nebel</td><td>2018–present</td></tr>
+                <tr><td class="years">8 yrs</td><td>Brian Hedden</td><td>2016–2024</td></tr>
+                <tr><td class="years">9 yrs</td><td>Jonathan Schaffer</td><td>2001–2010</td></tr>
+                <tr><td class="years">9 yrs</td><td>Paolo Santorio</td><td>2016–2025</td></tr>
+                <tr><td class="years">10 yrs</td><td>Jeffrey Sanford Russell</td><td>2013–2023</td></tr>
+                <tr><td class="years">11 yrs</td><td>Ted Sider</td><td>1995–2006</td></tr>
+                <tr><td class="years">12 yrs</td><td>Michael Tye</td><td>1982–1994</td></tr>
+                <tr><td class="years">13 yrs</td><td>Daniel Bonevac</td><td>1998–2011</td></tr>
+                <tr><td class="years">13 yrs</td><td>Miriam Schoenfield</td><td>2012–2025</td></tr>
+                <tr><td class="years">13 yrs</td><td>Trenton Merricks (C2)</td><td>1998–2011</td></tr>
+                <tr><td class="years">15 yrs</td><td>Trenton Merricks (C1)</td><td>1994–2009</td></tr>
+                <tr><td class="years">17 yrs</td><td>Robert Hopkins</td><td>1994–2011</td></tr>
+                <tr><td class="years">17 yrs</td><td>David Shoemaker</td><td>2007–2024</td></tr>
+                <tr><td class="years">18 yrs</td><td>John Hawthorne (C1)</td><td>1996–2014</td></tr>
+                <tr><td class="years">18 yrs</td><td>Robert Pasnau</td><td>2004–2022</td></tr>
+                <tr><td class="years">19 yrs</td><td>John Hawthorne (C2)</td><td>1997–2016</td></tr>
+                <tr><td class="years">21 yrs</td><td>Michael Huemer</td><td>2000–2021</td></tr>
+                <tr><td class="years">21 yrs</td><td>John Hawthorne (C4)</td><td>2004–2025</td></tr>
+                <tr><td class="years">24 yrs</td><td>Mark Johnston</td><td>1992–2016</td></tr>
+                <tr><td class="years">24 yrs</td><td>John Hawthorne (C3)</td><td>2000–2024</td></tr>
+                <tr><td class="years">29 yrs</td><td>John Martin Fischer</td><td>1982–2011</td></tr>
+                <tr><td class="years">49 yrs</td><td>Robert Audi</td><td>1973–2022</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr class="insight-divider">
+
+    <!-- 3-IN-1-YEAR CLUB -->
+    <div class="insight-block">
+        <h3>The 3-in-1-Year Club</h3>
+        <p>Three philosophers managed to place three cycle papers in a single calendar year.</p>
+        <div class="three-in-one-grid">
+            <div class="three-in-one-card">
+                <span class="trio-name">Matt Mandelkern</span>
+                <span class="trio-year">2019</span>
+                <span class="trio-journals">Phil Review, Mind, No&ucirc;s</span>
+            </div>
+            <div class="three-in-one-card">
+                <span class="trio-name">J. Dmitri Gallow</span>
+                <span class="trio-year">2021</span>
+                <span class="trio-journals">No&ucirc;s, Mind, Phil Review</span>
+            </div>
+            <div class="three-in-one-card">
+                <span class="trio-name">Brian Hedden</span>
+                <span class="trio-year">2024</span>
+                <span class="trio-journals">No&ucirc;s, PPR, Phil Review</span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="insight-divider">
+
+    <!-- SOLO vs CO-AUTHORED -->
+    <div class="insight-block">
+        <h3>Solo vs. Co-Authored Cycles</h3>
+        <div class="stat-row">
+            <div class="stat-card">
+                <span class="stat-number">15</span>
+                <span class="stat-label">Entirely Solo Cycles</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">12</span>
+                <span class="stat-label">Cycles w/ Co-Authorship</span>
+            </div>
+        </div>
+        <p>A slight majority of cycles (15 of 27) are built entirely from solo-authored papers: Gallow, Bonevac, Tye, Huemer, Hopkins, Mandelkern, Audi, Johnston, Schaffer, Sider, Merricks (both cycles), Pasnau, Santorio, and D'Ambrosio. On the other end, none of Hawthorne's four cycles is entirely solo&mdash;16 of his 20 cycle papers are co-authored, drawing on 17 distinct co-authors.</p>
+    </div>
+
+    <hr class="insight-divider">
+
+    <!-- CYCLER-ON-CYCLER -->
+    <div class="insight-block">
+        <h3>Cycler-on-Cycler Co-Authorships</h3>
+        <p>Four pairs of cyclers have co-authored cycle papers with each other:</p>
+        <div style="margin: 1rem 0;">
+            <div class="coauth-pair">
+                <span>Hawthorne</span><span class="coauth-ampersand">&amp;</span><span>Russell</span>
+                <span class="coauth-venue">&mdash; Phil Review (2016, 2022)</span>
+            </div>
+            <div class="coauth-pair">
+                <span>Hedden</span><span class="coauth-ampersand">&amp;</span><span>Greco</span>
+                <span class="coauth-venue">&mdash; J. Phil (2016)</span>
+            </div>
+            <div class="coauth-pair">
+                <span>Hedden</span><span class="coauth-ampersand">&amp;</span><span>Nebel</span>
+                <span class="coauth-venue">&mdash; Phil Review (2024)</span>
+            </div>
+            <div class="coauth-pair">
+                <span>Boylan</span><span class="coauth-ampersand">&amp;</span><span>Mandelkern</span>
+                <span class="coauth-venue">&mdash; Phil Review (2017)</span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="insight-divider">
+
+    <!-- THE CYCLE BOOM -->
+    <div class="insight-block">
+        <h3>The Cycle Boom</h3>
+        <div class="stat-row">
+            <div class="stat-card">
+                <span class="stat-number">1</span>
+                <span class="stat-label">1990s</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">2</span>
+                <span class="stat-label">2000s</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">9</span>
+                <span class="stat-label">2010s</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">15</span>
+                <span class="stat-label">2020s</span>
+            </div>
+        </div>
+        <p>2024 saw 6 cycle completions alone&mdash;the biggest single year on record. Michael Tye was the sole 1990s cycler; 15 cycles have been completed in the 2020s so far.</p>
+    </div>
+
+    <hr class="insight-divider">
+
+    <!-- HAWTHORNE -->
+    <div class="insight-block">
+        <h3>Hawthorne's Dominance</h3>
+        <div class="stat-row">
+            <div class="stat-card">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Cycles</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">17</span>
+                <span class="stat-label">Unique Co-Authors</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">16/20</span>
+                <span class="stat-label">Papers Co-Authored</span>
+            </div>
+        </div>
+        <p>Hawthorne is responsible for 4 of 27 total cycles&mdash;nearly 15%. He has more cycles than 13 of the 15 ranked departments. The next closest is Merricks with 2.</p>
+    </div>
+
+    <hr class="insight-divider">
+
+    <!-- DEMOGRAPHICS -->
+    <div class="insight-block">
+        <h3>Demographics</h3>
+        <div class="stat-row">
+            <div class="stat-card">
+                <span class="stat-number">1 / 23</span>
+                <span class="stat-label">Women (Schoenfield)</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">21</span>
+                <span class="stat-label">US-Based Cyclers</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Non-US (Both Scotland)</span>
+            </div>
+        </div>
+        <p>Miriam Schoenfield is the only woman to have completed the cycle. The only two cyclers based outside the US&mdash;Boylan (Glasgow) and D'Ambrosio (St Andrews)&mdash;are both in Scotland. Zero cyclers are currently based in continental Europe, Asia, or Australasia.</p>
+    </div>
+
+    <hr class="insight-divider">
+
+    <!-- TOPIC BREAKDOWN -->
+    <div class="insight-block">
+        <h3>Topics Represented</h3>
+        <p>A rough categorization of the 135 cycle papers by area (based on titles):</p>
+        <div class="topic-bar-container">
+            <div class="topic-bar-row">
+                <span class="topic-bar-label">Epistemology</span>
+                <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 100%;"></div></div>
+                <span class="topic-bar-value">~19%</span>
+            </div>
+            <div class="topic-bar-row">
+                <span class="topic-bar-label">Phil. of Language</span>
+                <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 96%;"></div></div>
+                <span class="topic-bar-value">~19%</span>
+            </div>
+            <div class="topic-bar-row">
+                <span class="topic-bar-label">Metaphysics</span>
+                <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 77%;"></div></div>
+                <span class="topic-bar-value">~15%</span>
+            </div>
+            <div class="topic-bar-row">
+                <span class="topic-bar-label">Ethics / Value Theory</span>
+                <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 65%;"></div></div>
+                <span class="topic-bar-value">~13%</span>
+            </div>
+            <div class="topic-bar-row">
+                <span class="topic-bar-label">Free Will</span>
+                <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 58%;"></div></div>
+                <span class="topic-bar-value">~11%</span>
+            </div>
+            <div class="topic-bar-row">
+                <span class="topic-bar-label">Decision Theory</span>
+                <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 54%;"></div></div>
+                <span class="topic-bar-value">~10%</span>
+            </div>
+            <div class="topic-bar-row">
+                <span class="topic-bar-label">Phil. of Mind</span>
+                <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 31%;"></div></div>
+                <span class="topic-bar-value">~6%</span>
+            </div>
+            <div class="topic-bar-row">
+                <span class="topic-bar-label">Aesthetics</span>
+                <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 15%;"></div></div>
+                <span class="topic-bar-value">~3%</span>
+            </div>
+            <div class="topic-bar-row">
+                <span class="topic-bar-label">Action Theory</span>
+                <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 15%;"></div></div>
+                <span class="topic-bar-value">~3%</span>
+            </div>
+            <div class="topic-bar-row">
+                <span class="topic-bar-label">Hist. of Philosophy</span>
+                <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 12%;"></div></div>
+                <span class="topic-bar-value">~2%</span>
+            </div>
+        </div>
+        <p style="font-size: 0.85rem; color: #718096; margin-top: 0.5rem;">Notably absent: political philosophy, philosophy of science, and applied ethics.</p>
+    </div>
+
+    <hr class="insight-divider">
+
+    <!-- EASTER EGG -->
+    <div class="insight-block">
+        <h3>Easter Egg</h3>
+        <div class="easter-egg">
+            Gallow published "<a class="journal-link" href="https://philpapers.org/go.pl?aid=GALETC-3" style="text-decoration:none;">Escaping the Cycle</a>" in <em>Mind</em> (2021)&mdash;as part of his cycle. The paper is about cyclic causal structures in decision theory, not this website.
+        </div>
+    </div>
+</section>
+
+
 <footer>
     <div class="contact-blurb">
         Notice an error? Please reach out.
