@@ -1,2069 +1,4162 @@
+
+
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Publishing for the Cycle</title>
+
     <style>
+
         :root { 
+
             --bg: #fdfcf9; 
+
             --text: #1a1a1a; 
+
             --accent: #2d3748; 
+
             --card-bg: #ffffff; 
+
             --border: #e2e8f0;
+
         }
+
         body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; padding: 4vw; line-height: 1.6; }
+
         
+
         .top-section { max-width: 900px; margin-bottom: 4rem; }
+
         header h1 { font-size: 3rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 1.5rem; }
+
         .description { font-size: 1.1rem; color: #333; margin-bottom: 2rem; }
+
         .journal-link { color: var(--accent); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 
+
+
         .criteria-section { background: #f7fafc; border: 1px solid var(--border); padding: 2.5rem; border-radius: 8px; margin-bottom: 4rem; }
+
         .criteria-section h2 { font-size: 1.2rem; margin-top: 0; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1rem; }
 
+
+
         .ranking-table { width: 100%; border-collapse: collapse; margin-bottom: 5rem; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
         .ranking-table th { text-align: left; background: var(--accent); color: white; padding: 1.2rem; font-size: 0.8rem; text-transform: uppercase; }
+
         .ranking-table td { padding: 1rem 1.2rem; border-bottom: 1px solid var(--border); font-weight: 700; }
+
         .dept-link { color: inherit; text-decoration: none; border-bottom: 1px solid #cbd5e0; }
+
         .dept-link:hover { border-bottom-color: var(--accent); }
 
+
+
        .philosophers-grid {
+
     display: grid;
+
     grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+
     gap: 2.5rem;
+
     align-items: start;
+
 }
+
         .philosopher-card { background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+
         .p-name { font-size: 1.5rem; font-weight: 800; display: block; }
+
         .p-dept { color: #718096; font-size: 0.85rem; margin-bottom: 1.5rem; display: block; font-weight: 600; }
+
         
+
         .cycle-label { font-size: 0.65rem; background: #2d3748; color: white; padding: 2px 8px; border-radius: 4px; font-weight: 800; margin-bottom: 1rem; display: inline-block; }
+
         .article { font-size: 0.85rem; margin-bottom: 0.5rem; display: flex; align-items: flex-start; }
+
         .journal { font-weight: 700; width: 130px; flex-shrink: 0; font-style: italic; color: #4a5568; }
+
         .title { color: #555; }
 
+
+
         footer { margin-top: 8rem; padding-top: 3rem; border-top: 1px solid var(--border); color: #718096; font-size: 0.9rem; }
+
         .contact-blurb { background: #edf2f7; padding: 1.5rem; border-radius: 6px; color: #2d3748; margin-bottom: 2rem; display: inline-block; font-weight: 500; }
+
     </style>
+
 </head>
+
 <body>
 
+
+
 <div class="top-section">
+
     <header>
+
         <h1>Publishing for the Cycle</h1>
+
         <div class="description">
+
             <p>Let’s say that one 'publishes for the cycle' when and only when one publishes a stand-alone, single- or multi-authored article in each of 
+
                 <a style="text-decoration:none; <a class="journal-link" href="https://philosophicalreview.org">The Philosophical Review</a>, 
+
                 <a style="text-decoration:none; <a class="journal-link" href="https://onlinelibrary.wiley.com/journal/14680068">Noûs</a>, 
+
                 <a style="text-decoration:none; <a class="journal-link" href="https://academic.oup.com/mind">Mind</a>,
+
                 <a style="text-decoration:none; <a class="journal-link" href="https://onlinelibrary.wiley.com/journal/19331592">Philosophy and Phenomenological Research</a>, and 
+
                 <a style="text-decoration:none; <a class="journal-link" href="https://www.journalofphilosophy.org">The Journal of Philosophy</a>, informally and semi-formally recognized as academic philosophy's <a style="text-decoration:none; <a class="journal-link" href="https://leiterreports.com/2022/08/23/best-general-journals-of-philosophy-2022-via-the-condorcet-method-and-via-an-average-of-both-methods/">"Top 5"</a> generalist journals.
+
             </p>
+
             <p>Think of a philosopher publishing for the cycle like a baseball player “hitting for the cycle”, or hitting a single, double, triple, and home run in one game. Hitting for the cycle isn’t the best thing a player can do for their team (Cf. hitting four home runs), but it’s impressive in its own way.</p>
+
             <p>This website displays philosophers' cycles and a ranking of philosophy departments in terms of them.</p>
+
             
+
         </div>
+
     </header>
+
 </div>
 
+
+
 <table class="ranking-table">
+
     <thead>
+
         <tr><th>Rank</th><th>Institution</th><th>Cyclers</th><th>Total Cycles</th></tr>
+
     </thead>
+
     <tbody>
+
         <tr><td>01</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://dornsife.usc.edu/phil/">Univ. of Southern California (USC)</a></td><td>Gallow (1), Hawthorne (4), Russell (1)</td><td>6</td></tr>
+
         <tr><td>02</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://www.colorado.edu/philosophy/">University of Colorado, Boulder</a></td><td>Huemer (1), Pasnau (1)</td><td>2</td></tr>
+
         <tr><td>02</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://as.nyu.edu/philosophy.html">New York University (NYU)</a></td><td>Hopkins (1), Mandelkern (1) </td><td>2</td></tr>
+
         <tr><td>02</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://philosophy.princeton.edu/">Princeton University</a></td><td>Johnston (1), Nebel (1)</td><td>2</td></tr>
+
         <tr><td>02</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://philosophy.rutgers.edu">Rutgers University</a></td><td>Schaffer (1), Sider (1) </td><td>2</td></tr>
+
         <tr><td>02</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://liberalarts.utexas.edu/philosophy/">University of Texas at Austin</a></td><td>Schoenfield (1), Tye (1)</td><td>2</td></tr>
+
         <tr><td>02</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://philosophy.virginia.edu">University of Virgina (UVA)</a></td><td>Merricks (2)</td><td>2</td></tr>
+
         <tr><td>03</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://www.uva.nl/en/discipline/philosophy/philosophy.html">University of Amsterdam</a></td><td>Douven (1)</td><td>1</td></tr>
+
         <tr><td>03</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://philosophy.ucr.edu">University of California, Riverside</a></td><td>Fischer (1)</td><td>1</td></tr>
+
         <tr><td>03</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://philosophy.cornell.edu">Cornell University</a></td><td>Shoemaker (1)</td><td>1</td></tr>
+
         <tr><td>03</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://www.gla.ac.uk/subjects/philosophy/">University of Glasgow</a></td><td>Boylan (1)</td><td>1</td></tr>
+
         <tr><td>03</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://philosophy.umd.edu/">University of Maryland, College Park</a></td><td>Santorio (1)</td><td>1</td></tr>
+
         <tr><td>03</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://philosophy.mit.edu/">Massachusetts Institute of Technology (MIT)</a></td><td>Hedden (1)</td><td>1</td></tr>
+
         <tr><td>03</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://philosophy.nd.edu">University of Notre Dame</a></td><td>Audi (1) </td><td>1</td></tr>
+
         <tr><td>03</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://www.st-andrews.ac.uk/philosophy/">University of St Andrews</a></td><td>D'Ambrosio (1)</td><td>1</td></tr>
+
         <tr><td>03</td><td><a class="dept-link" style="text-decoration:none; border-bottom:none;" href="https://philosophy.yale.edu/">Yale University</a></td><td>Greco (1)</td><td>1</td></tr>
+
         <tr><td>04</td><td>Remaining ~3k philosophy departments</a></td><td>~30k philosophers  (0)</td><td>0</td></tr>
+
     </tbody>
+
 </table>
+
 <section class="criteria-section">
+
     <h2>Department Cycle Criteria</h2>
+
     <ul style="margin: 0; padding-left: 1.2rem;">
+
         <li><strong>Active Faculty:</strong> Only cycles from full-time faculty members count toward a department's total.</li>
+
         <li><strong>Authorship:</strong> Single-authored and multi-authored articles qualify.</li>
+
         <li><strong>Article Type:</strong> Only original, refereed, stand-alone articles count.</li>
+
+    </ul>
+
+</section>
+
+<section class="criteria-section" style="margin-bottom: 4rem;">
+    <h2>The Cycle +</h2>
+    <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 1.5rem; line-height: 1.7;">
+        Some philosophical sub-disciplines have a specialty journal (or two) that is widely recognized as publishing the best work in those particular sub-disciplines. This section will, over time, list such sub-disciplines and any cyclers who have also published (original articles) in the associated specialty journal(s).
+    </p>
+    <h3 style="font-size: 0.9rem; font-weight: 700; color: var(--accent); margin-bottom: 0.75rem;">
+        The Cycle + <em>Ethics</em>
+    </h3>
+    <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.95rem; color: #333; line-height: 1.9;">
+        <li>Robert Audi</li>
+        <li>John Martin Fischer</li>
+        <li>Brian Hedden</li>
+        <li>Jake Nebel</li>
+        <li>Paolo Santorio</li>
+        <li>Miriam Schoenfield</li>
+        <li>David Shoemaker</li>
     </ul>
 </section>
+
+
 <div class="philosophers-grid">
+
+
 
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://jdmitrigallow.com/">J. Dmitri Gallow</a>
+
     </span>
+
     <span class="p-dept">University of Southern California</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/go.pl?aid=GALTCD-3">
+
                     The Causal Decision Theorist’s Guide to Managing the News (2020)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/GALUFE">
+
                     Updating for Externalists (2021)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/go.pl?aid=GALETC-3">
+
                     Escaping the Cycle (2021)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/go.pl?aid=GALCPA-8">
+
                     A Model-Invariant Theory of Causation (2021)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/go.pl?aid=GALCCW">
+
                     Causal Counterfactuals without Miracles or Backtracking (2024)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
    <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://dornsife.usc.edu/profile/john-hawthorne/">John Hawthorne</a>
+
     </span>
+
     <span class="p-dept">University of Southern California</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Nous</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/OLEHAA">Haecceitism and Anti-Haecceitism in Leibniz's Philosophy (w/ Cover, 1996)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HAWDCA">Deeply Contingent A Priori Knowledge (2002)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/ARNBID-2">Bayesianism, Infinite Decisions and Binding (w/ Arntzenius & Elga, 2004)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HAWKAA">Knowledge and Action (w/ Stanley, 2008)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/DORSPA-2">Semantic Plasticity and Speech Reports (w/ Dorr, 2014)</a>
+
             </span>
+
         </div>
+
     </div>
+
+
 
     <!-- Cycle 02 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 02</div>
 
+
+
         <div class="article">
+
             <span class="journal">Nous</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philarchive.org/rec/OLEMAT">Minimalism and Truth (w/ Oppy, 1997)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HAWCAC-2">Chance and Counterfactuals (2005)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HAWACA-4">Assertion, Context, and Epistemic Accessibility (w/ Magidor, 2009)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HAWOWS">On Words (w/ Lepore, 2011)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/RUSGDT-2">General Dynamic Triviality Theorems (w/ Russell, 2016)</a>
+
             </span>
+
         </div>
+
     </div>
+
+
 
     <!-- Cycle 03 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 03</div>
 
+
+
         <div class="article">
+
             <span class="journal">Nous</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HAWBAZ">Before-Effect and Zeno Causality (2000)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HAWAAE">Assertion and Epistemic Opacity (w/ Magidor, 2010)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/BLUIPP">Inheritance: Professor Procrastinate and the Logic of Obligation (w/ Blumberg, 2021)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HAWNSP">Not So Phenomenal! (w/ Lasonen-Aarnio, 2021)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/GOLSCA-5">Safety, Closure and Extended Methods (w/ Goldstein, 2024)</a>
+
             </span>
+
         </div>
+
     </div>
+
+
 
     <!-- Cycle 04 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 04</div>
 
+
+
         <div class="article">
+
             <span class="journal">Nous</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HAWWHA">Why Humeans Are Out of Their Minds (2004)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HAWHMA">How Many Angels Can Dance on the Head of A Pin? (w/ Uzquiano, 2011)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/SPEDPA">Doncaster Pandas and Caesar's Armadillo (w/ Spectre, 2024)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/ISAMUA-2">Multiple Universes and Self-Locating Evidence (w/ Russell & Isaacs, 2022)</a>
+
             </span>
+
         </div>
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/GOOUTM">Unknowable Truths (w/ Yli-Vakkuri & Goodsell, 2025)</a>
+
             </span>
+
         </div>
+
     </div>
 
+
+
 </div>
+
 <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://jefelino.github.io/">Jeffrey Sanford Russell</a>
+
     </span>
+
     <span class="p-dept">USC</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/RUSAFC">
+
                     Actuality for Counterpart Theorists (2013)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/RUSCAA-5">
+
                     Composition as Abstraction (2017)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/BACTLO-5">
+
                     The Logic of Opacity (w/ Bacon, 2017)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/ISAUWE">
+
                     Updating Without Evidence (w/ Isaacs, 2023)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/ISAMUA-2">
+
                     Multiple Universes and Self-Locating Evidence (w/ Isaacs & Hawthorne, 2022)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
    
+
 <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://www.miriamschoenfield.com/">Miriam Schoenfield</a>
+
     </span>
+
     <span class="p-dept">University of Texas at Austin</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/SCHPTB">
+
                     Permission to Believe: Why Permissivism Is True and What It Tells Us About Irrelevant Influences on Belief (2012)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/SCHBRA-15">
+
                     Bridging Rationality and Accuracy (2015)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philarchive.org/rec/SCHAAB-12">
+
                     An Accuracy Based Approach to Higher Order Evidence (2016)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/SCHCDN-4">
+
                     Conditionalization Does Not (in General) Maximize Expected Accuracy (2017)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/DOGWIA-6">
+
                     Why I Am Not a Boltzmann Brain (w/ Dogramaci, 2025)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://www.michaeltye.us">Michael Tye</a>
+
     </span>
+
     <span class="p-dept">University of Texas at Austin</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/TYEACA-2">
+
                     A Causal Analysis of Seeing (1982)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/TYETDA-2">
+
                     The Debate about Mental Imagery (1984)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/TYETPT-2">
+
                     The Picture Theory of Images (1988)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/TYETSQ">
+
                     The Subjective Qualities of Experience (1986)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/TYEQCA-2">
+
                     Qualia, Content, and the Inverted Spectrum (1994)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://spot.colorado.edu/~huemer/">Michael Huemer</a>
+
     </span>
+
     <span class="p-dept">University of Colorado, Boulder</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HUEDRA">
+
                     Direct Realism and the Brain-in-a-Vat Argument (2000)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HUEVIC-2">
+
                     Van Inwagen’s Consequence Argument (2000)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HUEIDO">
+
                     In Defence of Repugnance (2008)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HUEDPT">
+
                     Does Probability Theory Refute Coherentism? (2011)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HUEEIE-2">
+
                     Existence Is Evidence of Immortality (2021)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
 
+
+
     <div class="philosopher-card">
+
+
 
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://wp.nyu.edu/artsampscience-hopkins/">Robert Hopkins</a>
+
     </span>
+
     <span class="p-dept">NYU</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HOPRAM">
+
                     Resemblance and Misrepresentation (1994)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HOPED">
+
                     Explaining Depiction (1995)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HOPWIW">
+
                     What is Wrong With Moral Testimony? (2007)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HOPHTB-2">
+
                     How to Be a Pessimist about Aesthetic Testimony (2011)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HOPFPE">
+
                     Factive Pictorial Experience: What's Special About Photographs? (2010)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
 
+
+
     <div class="philosopher-card">
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://mmandelkern.github.io">Matt Mandelkern</a>
+
     </span>
+
     <span class="p-dept">NYU</span>
+
+
 
     <div class="cycle-label">Cycle 01</div>
 
+
+
     <div class="article">
+
         <span class="journal">Phil Review</span>
+
         <span class="title">
+
             <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MANBM-2">Bounded Modality (2019)</a>
+
         </span>
+
     </div>
+
     <div class="article">
+
         <span class="journal">Mind</span>
+
         <span class="title">
+
             <a style="text-decoration:none;" class="journal-link" href="https://philarchive.org/rec/KHOTRA">Triviality Results (2019)</a>
+
         </span>
+
     </div>
+
     <div class="article">
+
         <span class="journal">Noûs</span>
+
         <span class="title">
+
             <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MANPMS-2">Practical Moore Sentences (2019)</a>
+
         </span>
+
     </div>
+
     <div class="article">
+
         <span class="journal">J. Phil</span>
+
         <span class="title">
+
             <a style="text-decoration:none;" class="journal-link" href="https://philarchive.org/rec/MANIPT-2">If p, then p! (2021)</a>
+
         </span>
+
     </div>
+
     <div class="article">
+
         <span class="journal">PPR</span>
+
         <span class="title">
+
             <a style="text-decoration:none;" class="journal-link" href="https://philarchive.org/rec/MANCAA-6">Chance, Ability, and Control (2024)</a>
+
         </span>
+
     </div>
+
 </div>
+
+
 
     
 
+
+
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://philosophy.nd.edu/people/faculty/robert-audi/">Robert Audi</a>
+
     </span>
+
     <span class="p-dept">University of Notre Dame</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/AUDI">Intending (1973)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/AUDBAA">Believing and Affirming (1982)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/AUDAFR">
+
                     Acting for Reasons (1986)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/AUDJTA">
+
                     Justification, Truth, and Reliability (1988)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/AUDARN">
+
                     Are Reasons Normatively Basic? (2022)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
     
+
 <div class="philosophers-grid">
+
 <div class="philosopher-card">
 
+
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://johno.scholar.princeton.edu">Mark Johnston</a>
+
     </span>
+
     <span class="p-dept">Princeton University</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/JOHCIN">Constitution is not Identity (1992)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/JOHRAR-8">Reasons and Reductionism (1992)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/JOHTAO-45">The Authority of Affect (2001)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/JOHH">Hylomorphism (2006)</a>
+
             </span>
+
         </div>
+
+
 
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/JOHTPP-5">The Personite Problem: Should Practical Reason Be Tabled? (2016)</a>
+
             </span>
+
         </div>
 
+
+
     </div>
+
     </div>
+
+
 
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://jakenebel.com/">Jake Nebel</a>
+
     </span>
+
     <span class="p-dept">Princeton University</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/NEBTGT">
+
                     The Good, the Bad, and the Transitivity of Better Than (2018)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/NEBTSO">
+
                     The Sum of Well-Being (2023)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/NEBEWN">
+
                     Ethics without Numbers (2024)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/go.pl?aid=BUCTVO-2">
+
                     The Value of Risky Prospects (forthcoming)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/archive/HEDMCA.pdf">
+
                     Multidimensional Concepts and Disparate Scale Types (2024)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://jonathanschaffer.org/">Jonathan Schaffer</a>
+
     </span>
+
     <span class="p-dept">Rutgers University</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://www.jonathanschaffer.org/props.pdf">
+
                     Causes as Probability-Raisers of Processes (2001)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://www.jonathanschaffer.org/fundamental.pdf">
+
                     Is There a Fundamental Level? (2003)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://www.jonathanschaffer.org/knowanswer.pdf">
+
                     Knowing the Answer (2007)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://www.jonathanschaffer.org/monism.pdf">
+
                     Monism: The Priority of the Whole (2010)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://www.jonathanschaffer.org/internal.pdf">
+
                     The Internal Relatedness of All Things (2010)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://tedsider.org/">Ted Sider</a>
+
     </span>
+
     <span class="p-dept">Rutgers University</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://tedsider.org/papers/sparseness_immanence_naturalness.pdf">
+
                     Sparseness, Immanence, and Naturalness (1995)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://tedsider.org/papers/4d.pdf">
+
                     Four-Dimensionalism (1997)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://tedsider.org/papers/presentism.pdf">
+
                     Presentism and Ontological Commitment (1999)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://tedsider.org/papers/maximality_and_intrinsic_properties.pdf">
+
                     Maximality and Intrinsic Properties (2001)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://tedsider.org/papers/quantifiers_and_temporal_ontology.pdf">
+
                     Quantifiers and Temporal Ontology (2006)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://www.trentonmerricks.com">Trenton Merricks</a>
+
     </span>
+
     <span class="p-dept">UVA</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MEREAI">
+
                     Endurance and Indiscernibility (1994)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MERWET">
+
                     Warrant Entails Truth (1995)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MEROTI">
+
                     On the Incompatibility of Enduring and Perduring Entities (1995)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MERTAN">
+
                     There Are No Criteria of Identity Over Time (1998)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MERTAF">
+
                     Truth and Freedom (2009)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
+
+
 
     <!-- Cycle 02 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 02</div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MERATD">
+
                     Against the Doctrine of Microphysical Supervenience (1998)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MEREPC">
+
                     Endurance, Psychological Continuity, and the Importance of Personal Identity (1999)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MERPPA">
+
                     Persistence, Parts, and Presentism (1999)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MERTEO">
+
                     The End of Counterpart Theory (2003)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MERFAF">
+
                     Foreknowledge and Freedom (2011)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
    <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://philpeople.org/profiles/igor-douven">Igor Douven</a>
+
     </span>
+
     <span class="p-dept">University of Amsterdam</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/DOUPMA-2">
+
                     Putnam’s Model-Theoretic Argument Reconstructed (1999)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/DOUAKA">
+
                     Assertion, Knowledge, and Rational Credibility (2006)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/DOUAPD-5">
+
                     A Pragmatic Dissolution of Harman’s Paradox (2007)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/ROMANR">
+
                     A New Resolution of the Judy Benjamin Problem (2011)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/DECWIG">
+
                     What Is Graded Membership? (2012)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
     
+
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://philpeople.org/profiles/john-martin-fischer">John Martin Fischer</a>
+
     </span>
+
     <span class="p-dept">University of California, Riverside</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/FISRAC">
+
                     Responsibility and Control (1982)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/FISFAF">
+
                     Freedom and Foreknowledge (1983)
+
                 </a>
+
             </span>
+
         </div>
+
         
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/FISFAM">
+
                     Freedom and Miracles (1988)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/FISS">
+
                     Scotism (1994)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
         
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/FISTPO-3">
+
                     The Physiognomy of Responsibility (w/ Tognazzini 2011)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
     <div class="philosopher-card">
 
+
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://spot.colorado.edu/~pasnau/inprint/?utm_source=chatgpt.com">Robert Pasnau</a>
+
     </span>
+
     <span class="p-dept">University of Colorado, Boulder</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://spot.colorado.edu/~pasnau/inprint/fsm.pdf">
+
                     Form, Substance, and Mechanism (2004)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://spot.colorado.edu/~pasnau/inprint/2q.pdf">
+
                     A Theory of Secondary Qualities (2006)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/PASVD">
+
                     Veiled Disagreement (2014)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/PASEI">
+
                     Epistemology Idealized (2014)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://spot.colorado.edu/~pasnau/inprint/pasnau.bias.pdf">
+
                     Bias and Interpersonal Skepticism (2022)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://sites.google.com/site/dshoemakr/home">David Shoemaker</a>
+
     </span>
+
     <span class="p-dept">Cornell University</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/SHOPIA-2">
+
                     Personal Identity and Practical Concerns (2007)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://www.dropbox.com/scl/fi/yyiyytia5gx92w2dk5xmc/Shoemaker-Published-Response-Dependent-Responsibility.pdf?rlkey=fdt3hbqh961ksa50my82ejmqg&e=1&dl=0">
+
                     Response-Dependent Responsibility; Or, A Funny Thing Happened on the Way to Blame (2017)
+
                 </a>
+
             </span>
+
         </div>
+
         
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/SHOMTF">
+
                     Moral Torch Fishing: A Signaling Theory of Blame (w/ Manuel Vargas, 2018)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/SHOHF">
+
                     Hurt Feelings (2019)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
         
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://onlinelibrary.wiley.com/doi/10.1111/phpr.13070">
+
                     The Identity of What? Pluralism, Practical Interests, and Individuation (w/ Vilius Dranseika & Shaun Nichols, 2024)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
     <div class="philosopher-card">
 
+
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="http://david-h-boylan.weebly.com">David Boylan</a>
+
     </span>
+
     <span class="p-dept">University of Glasgow</span>
 
+
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/MANAM">Agentive Modals (w/ Mandelkern & Schultheis, 2017)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/BOYCSI-2">Counterfactual Skepticism is (Just) Skepticism (2024)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philarchive.org/rec/BOYWTF">What the Future ’Might’ Brings (2020)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/BOYDSE">Does Success Entail Ability? (2021)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/BOYHSI">How Strong Is a Counterfactual? (w/ Ginger Schultheis, 2021)</a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
     
+
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://brianhedden.wixsite.com/home">Brian Hedden</a>
+
     </span>
+
     <span class="p-dept">MIT</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/GREUAM">
+
                     Uniqueness and Metaepistemology (w/ Greco, 2016)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HEDCDT">
+
                     Counterfactual Decision Theory (2023)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HEDDOV">
+
                     Dimensions of Value (w/ Muñoz, 2024)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HEDPAP-2">
+
                     Parity and Pareto (2024)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/HEDMCA">
+
                     Multidimensional Concepts and Disparate Scale Types (w/ Nebel, 2024)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
 <div class="philosopher-card">
 
+
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="http://paolosantorio.net/">Paolo Santorio</a>
+
     </span>
+
     <span class="p-dept">University of Maryland, College Park</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/SANNKA-2">Nonfactual Know-How and the Boundaries of Semantics (2016)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philarchive.org/rec/SANPSF">Path Semantics for Indicative Conditionals (2022)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/SANTIC-6">Trivializing Informational Consequence (2022)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philarchive.org/rec/SANPOC-5">Probabilities of Counterfactuals are Counterfactual Probabilities (2025)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/SANAAD-11">Ability as Dependence Modality (2025)</a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
-</div>
 
 
 </div>
+
+
+
+
+
+</div>
+
 <div class="philosophers-grid">
 
+
+
     
+
 </div>
+
+
 
     <div class="philosopher-card">
 
+
+
     <!-- Header -->
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://justindambrosio.wixsite.com/philosophy">Justin D’Ambrosio</a>
+
     </span>
+
     <span class="p-dept">University of St. Andrews</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/DAMSVA">
+
                     Semantic Verbs Are Intensional Transitives (2019)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/DAMANP">
+
                     A New Perceptual Adverbialism (2019)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philarchive.org/rec/DAMRAT-2">
+
                     Ramsification and the Ramifications of Prior’s Puzzle (2021)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philarchive.org/rec/DAMPPG-2">
+
                     Prior’s Puzzle Generalized (2023)
+
                 </a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/DAMMUB">
+
                     Manipulative Underspecification (2025)
+
                 </a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
+
 
 <div class="philosopher-card">
 
+
+
     <span class="p-name">
+
         <a style="text-decoration:none;" class="journal-link" href="https://sites.google.com/site/dlgreco/">Daniel Greco</a>
+
     </span>
+
     <span class="p-dept">Yale University</span>
 
+
+
     <!-- Cycle 01 -->
+
     <div class="cycle-block">
+
         <div class="cycle-label">Cycle 01</div>
 
+
+
         <div class="article">
+
             <span class="journal">Phil Review</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/GRETIO-10">The Impossibility of Skepticism (2012)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">PPR</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/GREIAF-3">Iteration and Fragmentation (2015)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">J. Phil</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/GREUAM">Uniqueness and Metaepistemology (w/ Hedden, 2016)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Mind</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philarchive.org/rec/GRECMH">Cognitive Mobile Homes (2017)</a>
+
             </span>
+
         </div>
 
+
+
         <div class="article">
+
             <span class="journal">Noûs</span>
+
             <span class="title">
+
                 <a style="text-decoration:none;" class="journal-link" href="https://philpapers.org/rec/GREJAE">Justifications and Excuses in Epistemology (2019)</a>
+
             </span>
+
         </div>
+
+
 
     </div>
 
+
+
 </div>
+
 </div>
+
 </div>
+
 </div>
+
 <style>
+
     .insights-section {
+
         max-width: 900px;
+
         margin: 5rem 0;
+
     }
+
     .insights-section h2 {
+
         font-size: 2.2rem;
+
         font-weight: 900;
+
         letter-spacing: -1.5px;
+
         margin-bottom: 2.5rem;
+
     }
+
     .insight-block {
+
         margin-bottom: 3rem;
+
     }
+
     .insight-block h3 {
+
         font-size: 1.1rem;
+
         text-transform: uppercase;
+
         letter-spacing: 1px;
+
         color: var(--accent);
+
         margin-bottom: 0.8rem;
+
         font-weight: 800;
+
     }
+
     .insight-block p {
+
         font-size: 1rem;
+
         color: #333;
+
         line-height: 1.7;
+
     }
+
     .stat-row {
+
         display: flex;
+
         gap: 1.5rem;
+
         flex-wrap: wrap;
+
         margin: 1.5rem 0;
+
     }
+
     .stat-card {
+
         background: white;
+
         border: 1px solid var(--border);
+
         border-radius: 8px;
+
         padding: 1.2rem 1.5rem;
+
         flex: 1;
+
         min-width: 160px;
+
         box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+
     }
+
     .stat-card .stat-number {
+
         font-size: 2rem;
+
         font-weight: 900;
+
         letter-spacing: -1px;
+
         color: var(--accent);
+
         display: block;
+
     }
+
     .stat-card .stat-label {
+
         font-size: 0.75rem;
+
         text-transform: uppercase;
+
         letter-spacing: 0.5px;
+
         color: #718096;
+
         font-weight: 600;
+
     }
+
     .speed-table {
+
         width: 100%;
+
         border-collapse: collapse;
+
         margin: 1rem 0;
+
         font-size: 0.9rem;
+
     }
+
     .speed-table th {
+
         text-align: left;
+
         background: var(--accent);
+
         color: white;
+
         padding: 0.8rem 1rem;
+
         font-size: 0.7rem;
+
         text-transform: uppercase;
+
         letter-spacing: 0.5px;
+
     }
+
     .speed-table td {
+
         padding: 0.6rem 1rem;
+
         border-bottom: 1px solid var(--border);
+
     }
+
     .speed-table tr:first-child td {
+
         font-weight: 800;
+
     }
+
     .speed-table .years {
+
         font-weight: 700;
+
         font-variant-numeric: tabular-nums;
+
     }
+
     .insight-divider {
+
         border: none;
+
         border-top: 1px solid var(--border);
+
         margin: 3rem 0;
+
     }
+
     .topic-bar-container {
+
         margin: 1rem 0;
+
     }
+
     .topic-bar-row {
+
         display: flex;
+
         align-items: center;
+
         margin-bottom: 0.5rem;
+
         font-size: 0.85rem;
+
     }
+
     .topic-bar-label {
+
         width: 180px;
+
         flex-shrink: 0;
+
         font-weight: 600;
+
         color: #4a5568;
+
     }
+
     .topic-bar-track {
+
         flex: 1;
+
         height: 18px;
+
         background: #edf2f7;
+
         border-radius: 3px;
+
         overflow: hidden;
+
     }
+
     .topic-bar-fill {
+
         height: 100%;
+
         background: var(--accent);
+
         border-radius: 3px;
+
         transition: width 0.3s ease;
+
     }
+
     .topic-bar-value {
+
         width: 40px;
+
         text-align: right;
+
         font-weight: 700;
+
         font-size: 0.8rem;
+
         color: #718096;
+
         margin-left: 0.5rem;
+
         font-variant-numeric: tabular-nums;
+
     }
+
     .three-in-one-grid {
+
         display: grid;
+
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
         gap: 1rem;
+
         margin: 1rem 0;
+
     }
+
     .three-in-one-card {
+
         background: white;
+
         border: 1px solid var(--border);
+
         border-radius: 8px;
+
         padding: 1.2rem;
+
         box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+
     }
+
     .three-in-one-card .trio-name {
+
         font-weight: 800;
+
         font-size: 1rem;
+
         display: block;
+
         margin-bottom: 0.3rem;
+
     }
+
     .three-in-one-card .trio-year {
+
         font-size: 0.8rem;
+
         color: #718096;
+
         font-weight: 600;
+
         display: block;
+
         margin-bottom: 0.5rem;
+
     }
+
     .three-in-one-card .trio-journals {
+
         font-size: 0.8rem;
+
         color: #4a5568;
+
         font-style: italic;
+
     }
+
     .coauth-pair {
+
         display: flex;
+
         align-items: center;
+
         gap: 0.8rem;
+
         margin-bottom: 0.75rem;
+
         font-size: 0.9rem;
+
     }
+
     .coauth-ampersand {
+
         font-weight: 900;
+
         color: var(--accent);
+
         font-size: 1.1rem;
+
     }
+
     .coauth-venue {
+
         color: #718096;
+
         font-style: italic;
+
         font-size: 0.8rem;
+
     }
+
     .easter-egg {
+
         background: #f7fafc;
+
         border: 1px solid var(--border);
+
         border-left: 4px solid var(--accent);
+
         padding: 1.5rem 2rem;
+
         border-radius: 0 8px 8px 0;
+
         margin: 1.5rem 0;
+
         font-size: 0.95rem;
+
         color: #333;
+
     }
+
 </style>
 
+
+
 <section class="insights-section">
+
     <h2>Fun with the Data</h2>
 
+
+
     <!-- SPEED RECORDS -->
+
     <div class="insight-block">
+
         <h3>The Speed Records</h3>
+
         <div class="stat-row">
+
             <div class="stat-card">
+
                 <span class="stat-number">4 yrs</span>
+
                 <span class="stat-label">Fastest Cycle (Gallow)</span>
+
             </div>
+
             <div class="stat-card">
+
                 <span class="stat-number">49 yrs</span>
+
                 <span class="stat-label">Slowest Cycle (Audi)</span>
+
             </div>
+
             <div class="stat-card">
+
                 <span class="stat-number">13 yrs</span>
+
                 <span class="stat-label">Median Cycle</span>
+
             </div>
+
         </div>
+
         <table class="speed-table">
+
             <thead>
+
                 <tr><th>Span</th><th>Philosopher</th><th>Years</th></tr>
+
             </thead>
+
             <tbody>
+
                 <tr><td class="years">4 yrs</td><td>J. Dmitri Gallow</td><td>2020–2024</td></tr>
+
                 <tr><td class="years">5 yrs</td><td>Matt Mandelkern</td><td>2019–2024</td></tr>
+
                 <tr><td class="years">6 yrs</td><td>Justin D'Ambrosio</td><td>2019–2025</td></tr>
+
                 <tr><td class="years">7 yrs</td><td>David Boylan</td><td>2017–2024</td></tr>
+
                 <tr><td class="years">7 yrs</td><td>Daniel Greco</td><td>2012–2019</td></tr>
+
                 <tr><td class="years">8 yrs</td><td>Jake Nebel</td><td>2018–present</td></tr>
+
                 <tr><td class="years">8 yrs</td><td>Brian Hedden</td><td>2016–2024</td></tr>
+
                 <tr><td class="years">9 yrs</td><td>Jonathan Schaffer</td><td>2001–2010</td></tr>
+
                 <tr><td class="years">9 yrs</td><td>Paolo Santorio</td><td>2016–2025</td></tr>
+
                 <tr><td class="years">10 yrs</td><td>Jeffrey Sanford Russell</td><td>2013–2023</td></tr>
+
                 <tr><td class="years">11 yrs</td><td>Ted Sider</td><td>1995–2006</td></tr>
+
                 <tr><td class="years">12 yrs</td><td>Michael Tye</td><td>1982–1994</td></tr>
+
                 <tr><td class="years">13 yrs</td><td>Miriam Schoenfield</td><td>2012–2025</td></tr>
+
                 <tr><td class="years">13 yrs</td><td>Trenton Merricks (C2)</td><td>1998–2011</td></tr>
+
                 <tr><td class="years">13 yrs</td><td>Igor Douven</td><td>1999–2012</td></tr>
+
                 <tr><td class="years">15 yrs</td><td>Trenton Merricks (C1)</td><td>1994–2009</td></tr>
+
                 <tr><td class="years">17 yrs</td><td>Robert Hopkins</td><td>1994–2011</td></tr>
+
                 <tr><td class="years">17 yrs</td><td>David Shoemaker</td><td>2007–2024</td></tr>
+
                 <tr><td class="years">18 yrs</td><td>John Hawthorne (C1)</td><td>1996–2014</td></tr>
+
                 <tr><td class="years">18 yrs</td><td>Robert Pasnau</td><td>2004–2022</td></tr>
+
                 <tr><td class="years">19 yrs</td><td>John Hawthorne (C2)</td><td>1997–2016</td></tr>
+
                 <tr><td class="years">21 yrs</td><td>Michael Huemer</td><td>2000–2021</td></tr>
+
                 <tr><td class="years">21 yrs</td><td>John Hawthorne (C4)</td><td>2004–2025</td></tr>
+
                 <tr><td class="years">24 yrs</td><td>Mark Johnston</td><td>1992–2016</td></tr>
+
                 <tr><td class="years">24 yrs</td><td>John Hawthorne (C3)</td><td>2000–2024</td></tr>
+
                 <tr><td class="years">29 yrs</td><td>John Martin Fischer</td><td>1982–2011</td></tr>
+
                 <tr><td class="years">49 yrs</td><td>Robert Audi</td><td>1973–2022</td></tr>
+
             </tbody>
+
         </table>
+
     </div>
 
+
+
     <hr class="insight-divider">
+
+
 
     <!-- 3-IN-1-YEAR CLUB -->
+
     <div class="insight-block">
+
         <h3>The 3-in-1-Year Club</h3>
+
         <p>Three philosophers managed to place three cycle papers in a single calendar year.</p>
+
         <div class="three-in-one-grid">
+
             <div class="three-in-one-card">
+
                 <span class="trio-name">Matt Mandelkern</span>
+
                 <span class="trio-year">2019</span>
+
                 <span class="trio-journals">Phil Review, Mind, No&ucirc;s</span>
+
             </div>
+
             <div class="three-in-one-card">
+
                 <span class="trio-name">J. Dmitri Gallow</span>
+
                 <span class="trio-year">2021</span>
+
                 <span class="trio-journals">No&ucirc;s, Mind, Phil Review</span>
+
             </div>
+
             <div class="three-in-one-card">
+
                 <span class="trio-name">Brian Hedden</span>
+
                 <span class="trio-year">2024</span>
+
                 <span class="trio-journals">No&ucirc;s, PPR, Phil Review</span>
+
             </div>
+
         </div>
+
     </div>
 
+
+
     <hr class="insight-divider">
+
+
 
     <!-- SOLO vs CO-AUTHORED -->
+
     <div class="insight-block">
+
         <h3>Solo vs. Co-Authored Cycles</h3>
+
         <div class="stat-row">
+
             <div class="stat-card">
+
                 <span class="stat-number">16</span>
+
                 <span class="stat-label">Entirely Solo Cycles</span>
+
             </div>
+
             <div class="stat-card">
+
                 <span class="stat-number">12</span>
+
                 <span class="stat-label">Cycles w/ Co-Authorship</span>
+
             </div>
+
         </div>
+
         
+
     </div>
 
+
+
     <hr class="insight-divider">
+
+
 
     <!-- CYCLER-ON-CYCLER -->
+
     <div class="insight-block">
+
         <h3>Cycler-on-Cycler Co-Authorships</h3>
+
         <p>Four pairs of cyclers have co-authored cycle papers with each other:</p>
+
         <div style="margin: 1rem 0;">
+
             <div class="coauth-pair">
+
                 <span>Hawthorne</span><span class="coauth-ampersand">&amp;</span><span>Russell</span>
+
                 <span class="coauth-venue">&mdash; Phil Review (2016, 2022)</span>
+
             </div>
+
             <div class="coauth-pair">
+
                 <span>Hedden</span><span class="coauth-ampersand">&amp;</span><span>Greco</span>
+
                 <span class="coauth-venue">&mdash; J. Phil (2016)</span>
+
             </div>
+
             <div class="coauth-pair">
+
                 <span>Hedden</span><span class="coauth-ampersand">&amp;</span><span>Nebel</span>
+
                 <span class="coauth-venue">&mdash; Phil Review (2024)</span>
+
             </div>
+
             <div class="coauth-pair">
+
                 <span>Boylan</span><span class="coauth-ampersand">&amp;</span><span>Mandelkern</span>
+
                 <span class="coauth-venue">&mdash; Phil Review (2017)</span>
+
             </div>
+
         </div>
+
     </div>
 
+
+
     <hr class="insight-divider">
+
+
 
     <!-- THE CYCLE BOOM -->
+
     <div class="insight-block">
+
         <h3>The Cycle Boom</h3>
+
         <div class="stat-row">
+
             <div class="stat-card">
+
                 <span class="stat-number">1</span>
+
                 <span class="stat-label">1990s</span>
+
             </div>
+
             <div class="stat-card">
+
                 <span class="stat-number">2</span>
+
                 <span class="stat-label">2000s</span>
+
             </div>
+
             <div class="stat-card">
+
                 <span class="stat-number">10</span>
+
                 <span class="stat-label">2010s</span>
+
             </div>
+
             <div class="stat-card">
+
                 <span class="stat-number">15</span>
+
                 <span class="stat-label">2020s</span>
+
             </div>
+
         </div>
+
         <p>2024 saw 6 cycle completions alone&mdash;the biggest single year on record. Michael Tye was the sole 1990s cycler; 15 cycles have been completed in the 2020s so far.</p>
+
     </div>
 
+
+
     <hr class="insight-divider">
+
+
 
     <!-- HAWTHORNE -->
+
     <div class="insight-block">
+
         <h3>Hawthorne's Dominance</h3>
+
         <div class="stat-row">
+
             <div class="stat-card">
+
                 <span class="stat-number">4</span>
+
                 <span class="stat-label">Cycles</span>
+
             </div>
+
             <div class="stat-card">
+
                 <span class="stat-number">17</span>
+
                 <span class="stat-label">Unique Co-Authors</span>
+
             </div>
+
             <div class="stat-card">
+
                 <span class="stat-number">16/20</span>
+
                 <span class="stat-label">Papers Co-Authored</span>
+
             </div>
+
         </div>
+
         <p>Hawthorne is responsible for 4 of 28 total cycles&mdash;about 14%. He has more cycles than 14 of the 16 ranked departments. The next closest is Merricks with 2.</p>
+
     </div>
 
+
+
     <hr class="insight-divider">
+
+
 
     <!-- DEMOGRAPHICS -->
+
     <div class="insight-block">
+
         <h3>Demographics</h3>
+
         <div class="stat-row">
+
             <div class="stat-card">
+
                 <span class="stat-number">1 / 24</span>
+
                 <span class="stat-label">Women (Schoenfield)</span>
+
             </div>
+
             <div class="stat-card">
+
                 <span class="stat-number">21</span>
+
                 <span class="stat-label">US-Based Cyclers</span>
+
             </div>
+
             <div class="stat-card">
+
                 <span class="stat-number">3</span>
+
                 <span class="stat-label">Non-US Cyclers</span>
+
             </div>
+
         </div>
+
+
 
     </div>
 
+
+
     <hr class="insight-divider">
+
+
 
     <!-- TOPIC BREAKDOWN -->
+
     <div class="insight-block">
+
         <h3>Topics Represented</h3>
+
         <p>A rough categorization of the 140 cycle papers by area (based on titles):</p>
+
         <div class="topic-bar-container">
+
             <div class="topic-bar-row">
+
                 <span class="topic-bar-label">Epistemology</span>
+
                 <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 100%;"></div></div>
+
                 <span class="topic-bar-value">~19%</span>
+
             </div>
+
             <div class="topic-bar-row">
+
                 <span class="topic-bar-label">Phil. of Language</span>
+
                 <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 96%;"></div></div>
+
                 <span class="topic-bar-value">~19%</span>
+
             </div>
+
             <div class="topic-bar-row">
+
                 <span class="topic-bar-label">Metaphysics</span>
+
                 <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 77%;"></div></div>
+
                 <span class="topic-bar-value">~15%</span>
+
             </div>
+
             <div class="topic-bar-row">
+
                 <span class="topic-bar-label">Ethics / Value Theory</span>
+
                 <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 65%;"></div></div>
+
                 <span class="topic-bar-value">~13%</span>
+
             </div>
+
             <div class="topic-bar-row">
+
                 <span class="topic-bar-label">Free Will</span>
+
                 <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 58%;"></div></div>
+
                 <span class="topic-bar-value">~11%</span>
+
             </div>
+
             <div class="topic-bar-row">
+
                 <span class="topic-bar-label">Decision Theory</span>
+
                 <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 54%;"></div></div>
+
                 <span class="topic-bar-value">~10%</span>
+
             </div>
+
             <div class="topic-bar-row">
+
                 <span class="topic-bar-label">Phil. of Mind</span>
+
                 <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 31%;"></div></div>
+
                 <span class="topic-bar-value">~6%</span>
+
             </div>
+
             <div class="topic-bar-row">
+
                 <span class="topic-bar-label">Aesthetics</span>
+
                 <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 15%;"></div></div>
+
                 <span class="topic-bar-value">~3%</span>
+
             </div>
+
             <div class="topic-bar-row">
+
                 <span class="topic-bar-label">Action Theory</span>
+
                 <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 15%;"></div></div>
+
                 <span class="topic-bar-value">~3%</span>
+
             </div>
+
             <div class="topic-bar-row">
+
                 <span class="topic-bar-label">Hist. of Philosophy</span>
+
                 <div class="topic-bar-track"><div class="topic-bar-fill" style="width: 12%;"></div></div>
+
                 <span class="topic-bar-value">~2%</span>
+
             </div>
+
         </div>
 
+
+
     </div>
+
+
 
     <hr class="insight-divider">
 
+
+
     <!-- EASTER EGG -->
+
     <div class="insight-block">
+
         <h3>Easter Egg</h3>
+
         <div class="easter-egg">
+
             Gallow published "<a class="journal-link" href="https://philpapers.org/go.pl?aid=GALETC-3" style="text-decoration:none;">Escaping the Cycle</a>" in <em>Mind</em> (2021)&mdash;as part of his cycle. The paper is about cyclic causal structures in decision theory, not this website.
+
         </div>
+
     </div>
+
 </section>
+
+
+
+
 
 
 
 <footer>
+
     <div class="contact-blurb">
+
         Notice an error? Please reach out.
+
     </div>
+
     <p>Data current as of Feb 2026.</p>
+
     <p>Vibe coded to impress the D-suite by partial cycler <a class="journal-link" href="https://www.nglaskowski.com" style="text-decoration:none;">N. G. Laskowski</a> but beware, philosophers, of  <a class="journal-link" href="https://dailynous.com/2026/01/28/value-capture-in-philosophy/" style="text-decoration:none;">value capture</a>.
+
 </footer>
+
     <!-- your existing content -->
 
+
+
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
     <script>
+
         document.addEventListener('DOMContentLoaded', function () {
+
             new Masonry('.philosophers-grid', {
+
                 itemSelector: '.philosopher-card',
+
                 columnWidth: '.philosopher-card',
+
                 gutter: 40,
+
                 percentPosition: true
+
             });
+
         });
+
     </script>
+
 </body>
+
 </html>
+
+
+
